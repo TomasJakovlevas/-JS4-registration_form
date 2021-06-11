@@ -1,0 +1,143 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ---------------- STYLES ---------------- */
+
+/* CSS variables */
+
+:root {
+  --primary-color: #457b9d;
+  --secondary-color: #1d3557;
+
+  --light-color: #ffffff;
+  --dark-color: #000;
+}
+
+/* Mobile first */
+main {
+  width: calc(100vw - calc(100vw - 100%));
+  height: 100vh;
+  background-color: var(--light-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .wrapper {
+  width: 95%;
+  padding: 40px;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 500ms;
+}
+
+main .wrapper:hover {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 1);
+}
+
+main .wrapper .inputs_sections h1 {
+  text-align: center;
+  color: var(--light-color);
+  font-size: 2em;
+  padding: 0 0 0.5em 0;
+}
+
+main .wrapper .inputs_sections form {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main .wrapper .inputs_sections form .form-field {
+  width: 80%;
+  padding: 1.2em;
+  display: flex;
+  flex-direction: column;
+}
+
+main .wrapper .inputs_sections form .form-field label {
+  font-size: 1.2em;
+  color: var(--light-color);
+}
+
+main .wrapper .inputs_sections form .form-field input {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  border: 0;
+  color: var(--light-color);
+}
+
+main .wrapper .inputs_sections form .form-field input[type='text'],
+main .wrapper .inputs_sections form .form-field input[type='email'] {
+  border-bottom: 2px solid var(--light-color);
+}
+
+main .wrapper .inputs_sections form .form-field input[type='submit'] {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 0.7em 1em;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+main .wrapper .inputs_sections form .form-field input[type='submit']:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  cursor: pointer;
+}
+
+main .wrapper .inputs_sections form .form-field input:focus {
+  border: 0;
+  outline: none;
+}
+
+/* ---- LENTELE ------ */
+main .wrapper .ouput_section {
+  margin-top: 2em;
+  overflow-x: auto;
+}
+
+main .wrapper .ouput_section table {
+  padding: 10px;
+  background-color: var(--light-color);
+  width: 100%;
+}
+
+main .wrapper .ouput_section table thead {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+main .wrapper .ouput_section table thead tr th {
+  width: 25%;
+  padding: 0.1em 0.5em;
+}
+
+main .wrapper .ouput_section table tbody tr td {
+  width: 25%;
+  text-align: center;
+  padding: 0.3em 0.5em;
+}
+
+/* tablet */
+
+@media screen and (min-width: 768px) {
+  main .wrapper {
+    max-width: 800px;
+  }
+
+  main .wrapper .inputs_sections form .form-field {
+    width: 50%;
+  }
+}
